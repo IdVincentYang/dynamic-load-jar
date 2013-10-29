@@ -3,6 +3,6 @@
 
     <string name="static_lib_name">static-lib</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">This is static lib activity.</string>
+    <string name="hello_static_activity">This is static lib activity.</string>
 
 </resources>

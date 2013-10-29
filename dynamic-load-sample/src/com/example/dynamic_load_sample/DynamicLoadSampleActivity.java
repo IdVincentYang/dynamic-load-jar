@@ -18,12 +18,20 @@ public class DynamicLoadSampleActivity extends Activity {
 		}
 	};
 	
+	private OnClickListener mStartDynamicLibActivity = new OnClickListener() {
+		
+		public void onClick(View v) {
+//			Context ctx = v.getContext();
+		}
+	};
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dynamic_load_sample);
 		
 		findViewById(R.id.btnStartStaticLibActivity).setOnClickListener(mStartStaticLibActivity);
+		findViewById(R.id.btnStartDynamicLibActivity).setOnClickListener(mStartDynamicLibActivity);
 	}
 
 	@Override

@@ -16,4 +16,12 @@
         android:layout_centerHorizontal="true"
         android:text="@string/strBtnStartStaticLibActivity" />
 
+    <Button
+        android:id="@+id/btnStartDynamicLibActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStartStaticLibActivity"
+        android:layout_centerHorizontal="true"
+        android:text="@string/strBtnStartDynamicLibActivity" />
+
 </RelativeLayout>

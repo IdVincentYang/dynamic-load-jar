@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="dynamic_lib_name">dynamic-lib</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_dynamic_activity">This is dynamic lib activity.</string>
+
+</resources>

@@ -4,5 +4,6 @@
     <string name="app_name">dynamic-load-sample</string>
     <string name="action_settings">Settings</string>
     <string name="strBtnStartStaticLibActivity">Start Static Activity</string>
+    <string name="strBtnStartDynamicLibActivity">Start Dynamic Activity</string>
 
 </resources>

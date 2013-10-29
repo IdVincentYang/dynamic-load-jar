@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GBK" standalone="no"?>
+<jardesc>
+    <jar path="D:/dynamic-lib.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/dynamic-lib/output_jar_description.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="/dynamic-lib/output_jar_manifest.xml" manifestVersion="1.0" reuseManifest="false" saveManifest="true" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=dynamic-lib/src"/>
+        <folder path="/dynamic-lib/assets"/>
+        <folder path="/dynamic-lib/bin"/>
+        <folder path="/dynamic-lib/libs"/>
+        <folder path="/dynamic-lib/res"/>
+        <javaElement handleIdentifier="=dynamic-lib/gen"/>
+    </selectedElements>
+</jardesc>
