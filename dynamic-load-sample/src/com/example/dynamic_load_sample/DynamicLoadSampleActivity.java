@@ -21,7 +21,8 @@ public class DynamicLoadSampleActivity extends Activity {
 	private OnClickListener mStartDynamicLibActivity = new OnClickListener() {
 		
 		public void onClick(View v) {
-//			Context ctx = v.getContext();
+			Context ctx = v.getContext();
+			//ctx.startActivity(new Intent(ctx, com.example.dynamic_lib.DynamicLibActivity.class));
 		}
 	};
 	
