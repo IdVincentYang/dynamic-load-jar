@@ -9,7 +9,6 @@ import java.io.OutputStream;
 
 import android.content.Context;
 import android.content.res.AssetManager;
-import android.text.StaticLayout;
 import dalvik.system.DexClassLoader;
 
 public class MyLoader {
@@ -23,7 +22,12 @@ public class MyLoader {
 	private Context mContext;
 	private String mDexPath;
 	private String mOptimizedDexPath;
-
+    private ClassLoader mLoader;
+    
+    public ClassLoader getLoader() {
+    	return mLoader;
+    }
+    
 	private MyLoader() {
 		mContext = App.getInstance();
 		mDexPath = mContext.getDir(
@@ -34,9 +38,9 @@ public class MyLoader {
 		).getAbsolutePath();
 	}
 
-	private void loadLibrary(String name) throws IOException {
+	public void loadLibrary(String name) throws IOException {
 		String path = getLibraryPath(name);
-		DexClassLoader loader = new DexClassLoader(
+		mLoader = new DexClassLoader(
 				path,
 				mOptimizedDexPath,
 	    		null,

@@ -1,5 +1,7 @@
 package com.example.dynamic_load_sample;
 
+import java.io.IOException;
+
 import android.app.Application;
 
 public class App extends Application {
@@ -12,6 +14,10 @@ public class App extends Application {
     public void onCreate() {
     	mInstance = this;
     	super.onCreate();
-    	MyLoader.getInstance().loadLibrary("dynamic-lib.jar");
+		try {
+			MyLoader.getInstance().loadLibrary("dynamic-lib-dex.jar");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
     }
 }
