@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Toast;
 
 public class DynamicLoadSampleActivity extends Activity {
 
@@ -25,37 +24,17 @@ public class DynamicLoadSampleActivity extends Activity {
 			Context ctx = v.getContext();
 			//ctx.startActivity(new Intent(ctx, com.example.dynamic_lib.DynamicLibActivity.class));
 			Class<?> clazz = null;
-			Activity activity = null;
 			
-			ClassLoader loader = MyLoader.getInstance().getLoader();
-			// New instance of class which in dynamic loaded library.
+			ClassLoader loader = getClassLoader();
 			try {
 				clazz = loader.loadClass("com.example.dynamic_lib.DynamicLibActivity");
-				activity = (Activity)clazz.getDeclaredConstructor().newInstance();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 
-			Toast.makeText(
-					ctx,
-					(activity != null? "Found": "Not found") + " dynamic class instance!",
-					Toast.LENGTH_LONG
-			).show();
-			
-			clazz = null;
-			activity = null;
-			// New instance of self class from loader.
-			try {
-				clazz = loader.loadClass("com.example.dynamic_load_sample.DynamicLoadSampleActivity");
-				activity = (Activity)clazz.getDeclaredConstructor().newInstance();
-			} catch (Exception e) {
-				e.printStackTrace();
+			if (clazz != null) {
+				ctx.startActivity(new Intent(ctx, clazz));
 			}
-			Toast.makeText(
-					ctx,
-					(activity != null? "Found": "Not found") + " self class instance!",
-					Toast.LENGTH_LONG
-			).show();
 		}
 	};
 	
